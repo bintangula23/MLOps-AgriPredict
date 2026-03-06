@@ -2,11 +2,7 @@
 
 ## Deskripsi Proyek
 
-**AgriPredict** merupakan proyek pembelajaran MLOps yang bertujuan untuk membangun sistem prediksi harga cabai di Indonesia menggunakan data dari Pusat Informasi Harga Pangan Strategis (PIHPS) milik Bank Indonesia.
-
-Proyek ini dirancang untuk menerapkan praktik dasar MLOps mulai dari pengambilan data, preprocessing data, eksplorasi data, pelatihan model machine learning, hingga pengelolaan kode secara terstruktur menggunakan GitHub.
-
-Komoditas yang menjadi fokus analisis pada proyek ini adalah cabai merah besar dan cabai rawit merah. Data harga diambil secara berkala dari PIHPS dan digunakan untuk membangun model prediksi berbasis data historis harga.
+**AgriPredict** merupakan proyek pembelajaran MLOps yang bertujuan untuk membangun sistem prediksi harga cabai di Indonesia menggunakan data dari Pusat Informasi Harga Pangan Strategis (PIHPS) milik Bank Indonesia. Proyek ini dirancang untuk menerapkan praktik dasar MLOps mulai dari pengambilan data, preprocessing data, eksplorasi data, pelatihan model machine learning, hingga pengelolaan kode secara terstruktur menggunakan GitHub. Komoditas yang menjadi fokus analisis pada proyek ini adalah cabai merah besar dan cabai rawit merah. Data harga diambil secara berkala dari PIHPS (sumber tertera di bawah) dan digunakan untuk membangun model prediksi berbasis data historis harga.
 
 Melalui proyek ini diharapkan dapat dihasilkan sistem prediksi sederhana yang dapat membantu memahami pola fluktuasi harga cabai.
 
@@ -26,10 +22,16 @@ Tujuan dari proyek AgriPredict adalah:
 
 ## Struktur Direktori Proyek
 
-Struktur proyek mengikuti konvensi **Cookiecutter Data Science** agar kode mudah dipahami, terorganisir, dan mudah dikembangkan di masa depan.
+Struktur proyek ini mengikuti konvensi Cookiecutter Data Science agar pengembangan model machine learning lebih terorganisir, mudah dipahami, dan mudah dikembangkan nantinya.
 
 ```
 MLOps-AgriPredict
+│
+├── .devcontainer
+│   └── konfigurasi environment untuk GitHub Codespaces
+│
+├── config
+│   └── file konfigurasi proyek
 │
 ├── data
 │   ├── raw
@@ -42,31 +44,24 @@ MLOps-AgriPredict
 │   └── penyimpanan model machine learning yang telah dilatih
 │
 ├── notebooks
-│   └── notebook eksplorasi data dan eksperimen model
+│   └── notebook eksplorasi data (EDA) dan eksperimen model
 │
 ├── src
-│   ├── data
-│   │   └── script pengambilan dan pemrosesan data
-│   │
-│   ├── features
-│   │   └── script untuk feature engineering
-│   │
-│   └── models
-│       └── script training dan evaluasi model
-│
-├── config
-│   └── file konfigurasi proyek
+│   └── source code utama proyek seperti pengolahan data,
+│       feature engineering, dan training model
 │
 ├── requirements.txt
-│   └── daftar dependency Python
+│   └── daftar dependency Python yang digunakan dalam proyek
+│
+├── .gitignore
+│   └── file untuk mengatur file yang tidak perlu di-commit ke repository
+│
+├── LICENSE
+│   └── lisensi penggunaan proyek
 │
 └── README.md
-    └── dokumentasi proyek
+    └── dokumentasi utama proyek
 ```
-
-Struktur ini memisahkan data, kode, dan eksperimen sehingga pengembangan proyek menjadi lebih terorganisir.
-
----
 
 ## Teknologi yang Digunakan
 
@@ -81,8 +76,6 @@ Beberapa teknologi utama yang digunakan dalam proyek ini antara lain:
 * Jupyter Notebook
 * Git & GitHub
 * GitHub Codespaces
-
-Teknologi tersebut digunakan untuk mendukung proses pengambilan data, analisis data, pelatihan model, dan pengelolaan kode proyek.
 
 ---
 
@@ -133,13 +126,9 @@ Data harga pangan diperoleh dari:
 Pusat Informasi Harga Pangan Strategis (PIHPS)
 Bank Indonesia
 
-Website resmi:
+Website sumber resmi:
 https://www.bi.go.id/hargapangan
 
 Data tersebut menyediakan informasi harga komoditas pangan di berbagai wilayah Indonesia yang dapat digunakan untuk analisis dan pemodelan prediksi harga.
 
 ---
-
-## Catatan
-
-Proyek ini dikembangkan sebagai bagian dari pembelajaran **Machine Learning Operations (MLOps)** dengan fokus pada penerapan praktik pengelolaan proyek machine learning yang terstruktur dan reproducible menggunakan GitHub dan GitHub Codespaces.
